@@ -99,14 +99,6 @@ export const mockData = {
     { game: "FiveM", action: "3.6 hrs on record", time: "last played on 22 Jan", icon: "clock" },
     { game: "Counter-Strike 2", action: "Won 5 matches", time: "20 Jan", icon: "award" }
   ],
-  friends: [
-    { id: 1, username: "Saron Jenish", level: 25, status: "online", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop" },
-    { id: 2, username: "ROBOT", level: 12, status: "offline", lastSeen: "11 days ago", avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100&h=100&fit=crop" },
-    { id: 3, username: "Sora", level: 10, status: "offline", lastSeen: "15 days ago", avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop" },
-    { id: 4, username: "HiroTamilan", level: 9, status: "offline", lastSeen: "6 days ago", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" },
-    { id: 5, username: "GowthamJEERY", level: 7, status: "in-game", currentGame: "CS2", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" },
-    { id: 6, username: "MR_JONES", level: 7, status: "offline", lastSeen: "1 hrs, 15 mins ago", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" }
-  ],
   reviews: [
     {
       id: 1,
