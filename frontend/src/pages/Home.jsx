@@ -3,7 +3,7 @@ import { mockData } from '../mock';
 import { 
   Gamepad2, MapPin, Award, Star, TrendingUp, Clock, Users, 
   Filter, Search, ThumbsUp, Youtube, MessageCircle, Video,
-  CheckCircle, Shield, Trophy
+  CheckCircle, Shield, Trophy, Instagram, Github
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -36,7 +36,9 @@ const iconMap = {
   'message-circle': MessageCircle,
   'twitch': Video,
   'clock': Clock,
-  'award': Award
+  'award': Award,
+  'instagram': Instagram,
+  'github': Github
 };
 
 const Home = () => {
@@ -45,7 +47,7 @@ const Home = () => {
   const [selectedGame, setSelectedGame] = useState(null);
   const [contactOpen, setContactOpen] = useState(false);
 
-  const { profile, currentlyPlaying, games, recentActivity, friends, reviews } = mockData;
+  const { profile, currentlyPlaying, games, recentActivity, reviews } = mockData;
 
   const getStatusColor = (status) => {
     switch(status) {
@@ -84,7 +86,6 @@ const Home = () => {
             <nav className="hidden md:flex items-center gap-6">
               <a href="#games" className="text-zinc-300 hover:text-white transition-colors">Games</a>
               <a href="#activity" className="text-zinc-300 hover:text-white transition-colors">Activity</a>
-              <a href="#friends" className="text-zinc-300 hover:text-white transition-colors">Friends</a>
               <a href="#reviews" className="text-zinc-300 hover:text-white transition-colors">Reviews</a>
               <Button onClick={() => setContactOpen(true)} size="sm" className="bg-blue-600 hover:bg-blue-700">
                 Contact
@@ -318,49 +319,10 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            {/* Friends */}
-            <div id="friends">
-              <Card className="bg-zinc-900 border-zinc-800">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between text-lg">
-                    <span>Friends</span>
-                    <Badge variant="secondary" className="bg-zinc-800">{friends.length}</Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {friends.map(friend => (
-                      <div key={friend.id} className="flex items-center gap-3">
-                        <div className="relative">
-                          <img 
-                            src={friend.avatar}
-                            alt={friend.username}
-                            className="w-10 h-10 rounded-lg"
-                          />
-                          <div className={`absolute -bottom-1 -right-1 w-3 h-3 rounded-full border-2 border-zinc-900 ${getStatusColor(friend.status)}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="font-medium text-sm truncate">{friend.username}</p>
-                          <p className="text-xs text-zinc-500">
-                            {friend.status === 'online' && 'Online'}
-                            {friend.status === 'in-game' && `Playing ${friend.currentGame}`}
-                            {friend.status === 'offline' && `Last seen ${friend.lastSeen}`}
-                          </p>
-                        </div>
-                        <Badge variant="outline" className="text-xs border-zinc-700">
-                          Lv {friend.level}
-                        </Badge>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
             {/* Social Links */}
             <Card className="bg-zinc-900 border-zinc-800">
               <CardHeader>
-                <CardTitle className="text-lg">Connect</CardTitle>
+                <CardTitle className="text-lg">Connect With Me</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
