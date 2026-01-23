@@ -19,9 +19,9 @@ export const mockData = {
     ],
     socialLinks: [
       { platform: "YouTube", url: "https://www.youtube.com/@AMULPAPPU_001", icon: "youtube" },
-      { platform: "Steam", url: "#", icon: "gamepad" },
-      { platform: "Discord", url: "#", icon: "message-circle" },
-      { platform: "Twitch", url: "#", icon: "twitch" }
+      { platform: "Instagram", url: "https://www.instagram.com/lohith_x/", icon: "instagram" },
+      { platform: "Github", url: "https://github.com/Amulpappu", icon: "github" },
+      { platform: "Steam", url: "https://steamcommunity.com/profiles/76561199497363742/", icon: "gamepad" }
     ]
   },
   currentlyPlaying: {
