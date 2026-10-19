@@ -85,12 +85,12 @@ gamer-portfolio/
 │   │   └── index.js      # Entry point
 │   ├── public/           # Static files
 │   ├── package.json      # Dependencies
-│   └── .env             # Environment variables
+│   └── .env.example     # Copy to .env (never commit .env)
 │
 ├── backend/              # FastAPI application
 │   ├── server.py        # Main server file
 │   ├── requirements.txt # Python dependencies
-│   └── .env            # Backend environment variables
+│   └── .env.example    # Copy to .env (never commit .env)
 │
 └── README.md           # This file
 ```
@@ -138,14 +138,14 @@ Current color scheme:
 
 ### Frontend Environment Variables
 
-File: `frontend/.env`
+Copy `frontend/.env.example` to `frontend/.env`, then edit:
 ```
 REACT_APP_BACKEND_URL=http://localhost:8001
 ```
 
 ### Backend Environment Variables
 
-File: `backend/.env`
+Copy `backend/.env.example` to `backend/.env`, then edit:
 ```
 MONGO_URL=your_mongodb_connection_string
 DB_NAME=your_database_name
